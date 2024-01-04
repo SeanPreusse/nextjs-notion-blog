@@ -1,10 +1,12 @@
-export function filterArticles(articles, selectedTag) {
+import { Article } from "@/layouts/types";
+
+export function filterArticles(articles: Article[], selectedTag: string | null): Article[] {
   return articles
-    .sort((a, b) => Number(new Date(b.publishedDate)))
-    .filter(article => {
+    .sort((a, b) => Number(new Date(b.date)))
+    .filter((article: Article) => {
       if (selectedTag === null) {
         return true;
       }
-      return article.categories.includes(selectedTag);
+      return article.tags.includes(selectedTag);
     });
 }

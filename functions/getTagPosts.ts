@@ -31,7 +31,6 @@ export const getPublishedPostsByTag = async (tags?: string[]): Promise<Article[]
 
   const response = await notion.databases.query({
     database_id: databaseId,
-    filter,
     sorts: [
       {
         property: "date",

@@ -32,7 +32,7 @@ export default async function Page({
   const tags = postDetails.tags || [];
   
   // Pass id instead of uniqueId
-  const tagPosts: Article[] = (await getTagFilteredPosts({ tags, slug })) || [];
+  const tagPosts: Article[] = await getTagFilteredPosts({ tags, slug: String(slug) });
 
   return (
     <div className="space-y-5 max-w-7xl m-auto min-h-screen">

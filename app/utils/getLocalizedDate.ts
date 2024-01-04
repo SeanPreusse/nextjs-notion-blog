@@ -1,4 +1,4 @@
-export default function getLocalizedDate(date) {
+export default function getLocalizedDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: 'numeric',
     month: 'long',

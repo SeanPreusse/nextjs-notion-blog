@@ -19,7 +19,11 @@ export default function Navbar() {
   );
 }
 
-const NavLink = ({ href, children }) => (
+interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+const NavLink = ({ href, children }: NavLinkProps) => (
   <Link href={href} passHref>
     <a className="text-gray-600 hover:text-gray-800">{children}</a>
   </Link>

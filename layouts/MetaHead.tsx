@@ -1,19 +1,27 @@
 import Head from 'next/head';
 
-export function MetaHead(props) {
+interface MetaHeadProps {
+  date: string;
+  title: string;
+  imageUrl: string;
+  description: string;
+  ogUrl: string;
+}
+
+export function MetaHead(props: MetaHeadProps) {
   const { date, title, imageUrl, description, ogUrl } = props;
 
-  const titleName = title || "Analytics Roundtable";
+  const titleName = title || 'Analytics Roundtable';
 
   return (
     <Head>
       <title>{titleName}</title>
       <meta name="robots" content="follow, index" />
       <meta content={description || titleName} name="description" />
-      <meta property="og:site_name" content="Analytics Roundtable" />
+      <meta property="og:site_name" content={titleName} />
       <meta property="og:description" content={description} />
-      <meta property="og:title" content="Analytics Roundtable" />
-      <meta property="og:image" content="sitedata" />
+      <meta property="og:title" content={titleName} />
+      <meta property="og:image" content={imageUrl} />
 
       <meta property="og:url" content={ogUrl} />
       <meta property="og:type" content="website" />

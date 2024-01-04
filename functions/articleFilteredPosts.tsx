@@ -1,4 +1,3 @@
-// Updated function in functions/tagFilteredPosts.ts
 import notion from "@/lib";
 import { Article } from "@/layouts/types";
 import { convertToPost } from "./convertToPost";

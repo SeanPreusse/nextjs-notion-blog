@@ -1,9 +1,17 @@
-export default function Category({ setSelectedTag, tag, selectedTag }) {
-  const handleTagClick = (tag: string) => {
-    if (selectedTag === tag) {
+import React from 'react';
+
+interface CategoryProps {
+  setSelectedTag: (tag: string | null) => void;
+  tag: string;
+  selectedTag: string | null;
+}
+
+export default function Category({ setSelectedTag, tag, selectedTag }: CategoryProps) {
+  const handleTagClick = (clickedTag: string) => {
+    if (selectedTag === clickedTag) {
       return setSelectedTag(null);
     }
-    return setSelectedTag(tag);
+    return setSelectedTag(clickedTag);
   };
 
   return (
