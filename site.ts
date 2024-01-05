@@ -16,8 +16,8 @@ export const siteData = {
   footerText: '© All rights reserved',
   language: 'en-us',
   locale: 'en-US',
-  websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
-  aboutPageId: '071e2a85e97c4ca88511df735b30e6df'
+  websiteUrl: 'analyticsroundtable.com',
+  aboutPageId: '842ef29054f24e7a91eeb0755ad0c6a8&pm=s'
 };
 
 

@@ -4,8 +4,9 @@ Make your personal website and blog with Nextjs 14, tailwind and Notion.
 
 [Demo](https://analyticsroundtable.com/)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Notion Template](https://analyticsroundtable.notion.site/3adeaad843ae4b81a4bd25c004c50593?v=35a1d3a71cb24de49145ef099a22c0be)
 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
