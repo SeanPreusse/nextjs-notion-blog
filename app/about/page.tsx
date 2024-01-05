@@ -11,6 +11,13 @@ export default async function AboutPage({
 }) {
   const pageid = process.env.ABOUT_PAGE;
 
+  // Check if pageid is defined before using it
+  if (!pageid) {
+    // Handle the case when pageid is undefined
+    console.error("ABOUT_PAGE is not defined");
+    return null; // or return an error message or redirect, depending on your logic
+  }
+
   // Fetching blockMap
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${pageid}`, {
     next: { revalidate: 60 },
@@ -19,6 +26,7 @@ export default async function AboutPage({
 
   // Fetching pageProperties
   const pageProperties = await notion.pages.retrieve({ page_id: pageid });
+
   const postDetails = convertToPost(pageProperties);
 
   return (
