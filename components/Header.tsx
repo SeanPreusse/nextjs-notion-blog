@@ -11,7 +11,7 @@ const Header = () => {
           <div className="flex flex-row items-center">
             <Link className="" href="/">
               <Image
-                src="/Logo.avif"
+                src="/Logo.svg"
                 width={28}
                 height={28}
                 alt="AnalyticsRoundtable"

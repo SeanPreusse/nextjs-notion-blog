@@ -17,7 +17,6 @@ export const siteData = {
   language: 'en-us',
   locale: 'en-US',
   websiteUrl: 'analyticsroundtable.com',
-  aboutPageId: '842ef29054f24e7a91eeb0755ad0c6a8&pm=s'
 };
 
 

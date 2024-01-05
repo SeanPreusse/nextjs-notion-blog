@@ -25,6 +25,7 @@ export default async function Page({
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
     next: { revalidate: 60 },
   });
+  console.log(response)
   const blockMap = await response.json();
   const pageProperties = await notion.pages.retrieve({ page_id: id });
   const postDetails = convertToPost(pageProperties);

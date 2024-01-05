@@ -9,7 +9,7 @@ export default async function AboutPage({
 }: {
   searchParams: { [key: string]: string };
 }) {
-  const pageid = siteData.aboutPageId
+  const pageid = process.env.ABOUT_PAGE;
 
   // Fetching blockMap
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${pageid}`, {
