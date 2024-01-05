@@ -9,17 +9,7 @@ const Header = () => {
         <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
           {/* Logo */}
           <div className="flex flex-row items-center">
-          <div>
-            <Link className="hidden sm:block" href="/">
-              <Image
-                src="/logo.avif"
-                width={28}
-                height={28}
-                alt="AnalyticsRoundtable"
-              />
-            </Link>
-
-            <Link className="sm:hidden" href="/">
+            <Link className="" href="/">
               <Image
                 src="/Logo.avif"
                 width={28}
@@ -27,8 +17,7 @@ const Header = () => {
                 alt="AnalyticsRoundtable"
               />
             </Link>
-          </div>
-          <Link className="hidden sm:block ml-1 font-medium text-gray-800 " href="/">
+          <Link className="hidden sm:block ml-1 font-medium text-gray-800" href="/">
           Analytics Roundtable
           </Link>
           </div>
