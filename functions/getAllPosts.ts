@@ -1,5 +1,5 @@
 import notion from "@/lib";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 import { convertToPost } from "./convertToPost";
 
 export const getAllPosts = async (): Promise<Article[]> => {
@@ -7,10 +7,21 @@ export const getAllPosts = async (): Promise<Article[]> => {
   const response = await notion.databases.query({
     database_id: databaseId,
     filter: {
-      property: "status",
-      select: {
-        equals: "Published",
-      },
+      and: [
+        {
+          property: "status",
+          select: {
+            equals: "Published",
+          },
+        },
+        {
+          property: "type",
+          select: {
+            equals: "Post",
+          },
+        },
+        // Add more conditions if needed
+      ],
     },
     sorts: [
       {

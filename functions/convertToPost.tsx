@@ -1,4 +1,4 @@
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 
 export const convertToPost = (item: any): Article => ({
   id: item.id,

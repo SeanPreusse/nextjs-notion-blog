@@ -1,4 +1,4 @@
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 
 export function filterArticles(articles: Article[], selectedTag: string | null): Article[] {
   return articles

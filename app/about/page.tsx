@@ -2,14 +2,14 @@ import { NotionRenderer } from 'react-notion';
 import notion from '@/lib';
 import { convertToPost } from '@/functions/convertToPost';
 import TopScrollButton from '@/components/TopScrollButton';
-import { aboutPageId } from "@/site";
+import { siteData } from "@/site";
 
 export default async function AboutPage({
   searchParams,
 }: {
   searchParams: { [key: string]: string };
 }) {
-  const pageid = aboutPageId
+  const pageid = siteData.aboutPageId
 
   // Fetching blockMap
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${pageid}`, {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Input } from "@/components/input";
-import { Article, TagFrequencyMap } from "@/layouts/types";
+import { Article, TagFrequencyMap } from "@/lib/types";
 import { useState } from "react";
 import Tags from "./Tags";
 import { useParams } from "next/navigation";

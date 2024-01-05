@@ -1,4 +1,4 @@
-import { Article, TagFrequencyMap } from "@/layouts/types";
+import { Article, TagFrequencyMap } from "@/lib/types";
 
 export const calculateTagFrequency = async ({
   publishedPosts,

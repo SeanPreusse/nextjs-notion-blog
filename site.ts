@@ -1,4 +1,4 @@
-import { FooterNavItem, LinkItem } from "@/layouts/types";
+import { FooterNavItem, LinkItem } from "@/lib/types";
 import { Linkedin, Slack } from "lucide-react";
 
 export const links: LinkItem[] = [
@@ -7,7 +7,19 @@ export const links: LinkItem[] = [
   // { id: 3, name: "Search", to: "/search" },
 ];
 
-export const aboutPageId = "071e2a85e97c4ca88511df735b30e6df";
+export const siteData = {
+  title: 'Analytics Roundtable',
+  author: 'Analytics Roundtable',
+  headerTitle: 'Analytics Roundtable',
+  profileUrl: '/logo.svg',
+  headerDescription: 'Open Community for Data Professionals',
+  footerText: '© All rights reserved',
+  language: 'en-us',
+  locale: 'en-US',
+  websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
+  aboutPageId: '071e2a85e97c4ca88511df735b30e6df'
+};
+
 
 export const footerNavigation: FooterNavItem[] = [
   // {

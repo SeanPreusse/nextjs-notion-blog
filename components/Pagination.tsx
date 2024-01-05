@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { PaginationProps } from "@/layouts/types";
+import { PaginationProps } from "@/lib/types";
 import Link from "next/link";
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {

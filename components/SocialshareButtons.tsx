@@ -21,19 +21,19 @@ const SocialshareButtons = ({
   return (
     <div className="space-x-3">
       <FacebookShareButton url={shareUrl}>
-        <FacebookIcon size={32} round />
+        <FacebookIcon size={25} round />
       </FacebookShareButton>
 
       <TwitterShareButton url={shareUrl} title={title}>
-        <XIcon size={32} round />
+        <XIcon size={25} round />
       </TwitterShareButton>
 
       <TelegramShareButton url={shareUrl} title={title}>
-        <TelegramIcon size={32} round />
+        <TelegramIcon size={25} round />
       </TelegramShareButton>
 
       <WhatsappShareButton url={shareUrl} title={title}>
-        <WhatsappIcon size={32} round />
+        <WhatsappIcon size={25} round />
       </WhatsappShareButton>
     </div>
   );

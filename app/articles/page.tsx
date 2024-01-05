@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/functions/getAllPosts";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 import Search from "../../components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 

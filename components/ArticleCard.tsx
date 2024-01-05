@@ -1,4 +1,4 @@
-import { Article } from '@/layouts/types';
+import { Article } from '@/lib/types';
 import slugify from 'slugify';
 import getLocalizedDate from '../app/utils/getLocalizedDate';
 

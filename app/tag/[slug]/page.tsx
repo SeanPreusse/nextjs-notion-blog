@@ -2,7 +2,7 @@ import Search from "@/components/Search";
 import { getAllPosts } from "@/functions/getAllPosts";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 import { getTagFilteredPosts } from "@/functions/tagFilteredPosts";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;

@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { TagFrequencyMap } from "@/layouts/types";
+import { TagFrequencyMap } from "@/lib/types";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 

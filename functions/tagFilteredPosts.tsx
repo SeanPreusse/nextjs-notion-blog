@@ -1,5 +1,5 @@
 import notion from "@/lib";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 import { convertToPost } from "./convertToPost";
 
 export const getTagFilteredPosts = async ({

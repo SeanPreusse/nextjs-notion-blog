@@ -8,9 +8,12 @@ import TopScrollButton from "../../../components/TopScrollButton";
 import Container from '@/components/Container';
 import ArticleList from '@/components/ArticleList';
 import { getAllPosts } from "@/functions/getAllPosts";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 import getLocalizedDate from '@/app/utils/getLocalizedDate';
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
+import SocialshareButtons from "@/components/SocialshareButtons";
+
+
 
 export default async function Page({
   searchParams,
@@ -36,7 +39,7 @@ export default async function Page({
 
   return (
     <div className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <img className="object-cover w-full h-52 rounded-[20px] aspect-video" src={postDetails.coverImage} />
+      <img className="object-cover w-full h-52 lg:rounded-[20px] aspect-video" src={postDetails.coverImage} />
 
       <div>
         <div className="text-center space-y-5 text-sm mx-auto mt-3">
@@ -50,8 +53,16 @@ export default async function Page({
             <div className="font-semibold">
               {postDetails.author}
             </div>
+            <SocialshareButtons
+        shareUrl={`http://localhost:3000/${postDetails.slug}?id=${postDetails.id}`}
+        title={postDetails.title}
+      />
           </div>
+
+
+
         </div>
+
 
         <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4">
           <NotionRenderer blockMap={blockMap} />

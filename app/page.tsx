@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/functions/getAllPosts";
-import { Article } from "@/layouts/types";
+import { Article } from "@/lib/types";
 import { postsPerPage } from "@/site";
 import Feed from "@/components/Feed";
 import HeroSection from "../components/HeroSection";
