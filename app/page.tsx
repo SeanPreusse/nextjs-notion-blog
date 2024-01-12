@@ -4,20 +4,8 @@ import { postsPerPage } from "@/site";
 import Feed from "@/components/Feed";
 import HeroSection from "../components/HeroSection";
 import axios, { AxiosResponse } from 'axios';
+import { sendSlackMessage } from "@/functions/sendSlackMessage";
 
-interface SlackMessage {
-  text: string;
-}
-
-const sendSlackMessage = async (message: SlackMessage): Promise<AxiosResponse> => {
-  const slackWebhookUrl = process.env.SLACK_WEBHOOK;
-
-  if (!slackWebhookUrl) {
-    throw new Error('Slack webhook URL is not defined.');
-  }
-
-  return await axios.post(slackWebhookUrl, message);
-};
 
 const HomePage = async ({
   searchParams,
@@ -28,7 +16,7 @@ const HomePage = async ({
   const publishedPosts: Article[] = await getAllPosts();
 
   // Send a message to Slack when the page is accessed
-  const message: SlackMessage = {
+  const message = {
     text: `Someone visited the homepage! Page: ${page}`,
   };
 
